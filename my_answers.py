@@ -4,14 +4,15 @@ from keras.models import Sequential
 from keras.layers import Dense
 from keras.layers import LSTM
 import keras
+import string
 
 
-# TODO: fill out the function below that transforms the input series 
+# Fill out the function below that transforms the input series 
 # and window-size into a set of input/output pairs for use with our RNN model
 def window_transform_series(series, window_size):
     # containers for input/output pairs
-    X = []
-    y = []
+    X = np.vstack(tuple([series[i:i+window_size] for i in range(len(series)-window_size)]))
+    y = series[window_size:]
 
     # reshape each 
     X = np.asarray(X)
@@ -21,15 +22,21 @@ def window_transform_series(series, window_size):
 
     return X,y
 
-# TODO: build an RNN to perform regression on our time series input/output data
+# Build an RNN to perform regression on our time series input/output data
 def build_part1_RNN(window_size):
-    pass
+    model = Sequential()
+    model.add(LSTM(5,input_shape=(window_size,1)))
+    model.add(Dense(1,activation='linear'))
+    return model
 
 
-### TODO: return the text input with only ascii lowercase and the punctuation given below included.
+### Return the text input with only ascii lowercase and the punctuation given below included.
 def cleaned_text(text):
     punctuation = ['!', ',', '.', ':', ';', '?']
-
+    clean_text = [ c for c in text if c in punctuation or c in string.ascii_lowercase]
+    text = '';
+    for c in clean_text:
+        text += c
     return text
 
 ### TODO: fill out the function below that transforms the input text and window-size into a set of input/output pairs for use with our RNN model
@@ -38,9 +45,19 @@ def window_transform_text(text, window_size, step_size):
     inputs = []
     outputs = []
 
+    for i in range(0, len(text) - window_size, step_size):
+        tmp_in = text[i:i + window_size]
+        tmp_out = text[i + window_size]
+        inputs.append(tmp_in)
+        outputs.append(tmp_out)
+
     return inputs,outputs
 
 # TODO build the required RNN model: 
 # a single LSTM hidden layer with softmax activation, categorical_crossentropy loss 
 def build_part2_RNN(window_size, num_chars):
-    pass
+    model = Sequential()
+    model.add(LSTM(200,input_shape=(window_size,num_chars),dropout=0.2,recurrent_dropout=0.2))
+    model.add(Dense(num_chars,activation='linear'))
+    model.add(Dense(num_chars,activation='softmax'))
+    return model
