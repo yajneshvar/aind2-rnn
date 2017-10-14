@@ -1,15 +1,20 @@
 -------------------
 input chars = 
-e eclipses and predominates the whole of her sex. it was not that he felt any emotion akin to love f"
+clipsesandpredominatesthewholeofhersex.itwasnotthathefeltanyemotionakintoloveforireneadler.allemotio"
 predicted chars = 
-or a claad of the carige. is no doubt that i may groute, and sourne, he said, and where the case upo"
+n.therewasandthenight,andthenighttherewasnothereasthereasenthestorded,andtherewasnotonethattherewasn"
 -------------------
 input chars = 
- difficulties, if you are to understand the situation. i am following you closely, i answered. i was"
+stperfectreasoningandobservingmachinethattheworldhasseen,butasaloverhewouldhaveplacedhimselfinafalse"
 predicted chars = 
- weakn of their. weyen he come to see me what i was ally unow that there was no some allosing a smal"
+rvedtothemanderstandsherearedtothemanderstandsherearedtothemanderstandsherearedtothemanderstandshere"
 -------------------
 input chars = 
-notice the carriage go up any. come, cried the inspector, laughing; its a very pretty diversity of o"
+position.heneverspokeofthesofterpassions,savewithagibeandasneer.theywereadmirablethingsfortheobserve"
 predicted chars = 
-thers. and the evering a small bearine it allars where are remarked hor had been day no tonsing that"
+ryourselfthemandingofthesadethattherewasnotofthestorder,andtherewasnotonethattherewasnotofthestorder"
+-------------------
+input chars = 
+rexcellentfordrawingtheveilfrommensmotivesandactions.butforthetrainedreasonertoadmitsuchintrusionsin"
+predicted chars = 
+themanterstandsherearedtothemanderstandsherearedtothemanderstandsherearedtothemanderstandsherearedto"
